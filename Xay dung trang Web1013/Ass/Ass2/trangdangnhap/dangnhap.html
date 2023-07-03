@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            width: 980px;
+            margin: auto;
+        }
+
+        .header-main {
+            height: 150px;
+            background: black;
+            text-align: center;
+
+
+        }
+
+        .header-main img {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            max-width: 150px;
+
+        }
+
+        .nav-main {
+            height: 50px;
+            background: rgb(133, 68, 144);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav-main ul li {
+            list-style: none;
+            float: left;
+            line-height: 50px;
+            padding: 0 30px;
+        }
+
+        .nav-main ul li:hover {
+            color: rgb(240, 163, 10);
+            background: rgb(239, 238, 254);
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .nav-main ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-main ul li a:hover {
+            font-size: medium;
+            font-weight: bolder;
+            color: rgb(240, 163, 10);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .wapper {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .wapper-heading {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .wapper-heading h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .dangnhap {
+            margin-bottom: 15px;
+        }
+
+        .dangnhap input[type="text"],
+        .dangnhap input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .chucnang {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .chucnang a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        .chucnang a:hover {
+            text-decoration: underline;
+        }
+
+        .link-dangki {
+            margin: 10px;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #119ee5;
+            text-decoration: none;
+            font-size: 70%;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #8b1793;
+            border: none;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #b008b9;
+        }
+
+
+        .nav-main button[type="submit"] {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .nav-main button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: rgb(133, 68, 144);
+            color: #d2cfcf;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: smaller;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header-main">
+            <a href="ass1.html"><img src="../../Ass1/img/logonew-removebg-preview.png" alt=""></a>
+        </header>
+        <nav class="nav-main">
+            <ul>
+                <li><a href="../../Ass1/ass1.html">Trang chủ</a></li>
+                <li><a href="../../Ass2/tranglienhe/lienhe.html">Liên hệ</a></li>
+                <li><a href="../../Ass1/ass1.html">Sản phẩm</a></li>
+                <li><a href="../../Ass1/lietke.html">Bảng giá</a></li>
+                <li><a href="../../Ass2/trangdangnhap/dangnhap.html">Đăng nhập</a></li>
+                <li><a href=""></a></li>
+                <li>
+                    <aside>
+                        <input type="text" placeholder="Tìm kiếm">
+                        <button type="submit">Tìm kiếm</button>
+                    </aside>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="wapper">
+            <div class="wapper-heading">
+                <h1>Đăng Nhập</h1>
+            </div>
+
+            <form action="">
+                <div class="dangnhap">
+                    <input type="text" id="tendangnhap" placeholder="Tên đăng nhập">
+                </div>
+
+                <div class="dangnhap">
+                    <input type="password" id="password" placeholder="Mật khẩu">
+                </div>
+
+                <div class="chucnang">
+                    <label for="remember">Nhớ mật khẩu</label>
+                    <input type="checkbox" id="remember">
+                </div>
+
+                <div class="chucnang">
+                    <a href="#" class="quenmatkhau">Quên mật khẩu?</a>
+                </div>
+
+                <button id="dangnhapbtn" class="btn">Đăng nhập</button>
+
+                <a href="dangki.html" class="link-dangki">Đăng kí</a>
+            </form>
+        </div>
+        <footer>
+            CÔNG TY CỔ PHẦN THƯƠNG MẠI - DỊCH VỤ
+            TR1
+            © 2023 - 2050 Công Ty Cổ Phần Thương
+            Mại - Dịch Vụ TR1
+
+            Giấy chứng nhận đăng ký doanh nghiệp:
+            0358168699 do Sở KH-ĐT TP.HN cấp lần đầu ngày 24 tháng 05 năm 2023
+        </footer>
+</body>
+
+</html>

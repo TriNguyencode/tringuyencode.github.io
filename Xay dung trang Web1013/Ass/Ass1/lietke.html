@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Danh sách sản phẩm</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            width: 980px;
+            margin: auto;
+        }
+
+        .header-main {
+            height: 150px;
+            background: black;
+            text-align: center;
+
+
+        }
+
+        .header-main img {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            max-width: 150px;
+
+        }
+
+        .nav-main {
+            display: inline-block;
+            /**/
+            height: 50px;
+            background: rgb(133, 68, 144);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav-main ul li {
+            list-style: none;
+            float: left;
+            line-height: 50px;
+            padding: 0 30px;
+
+        }
+
+        .nav-main ul li:hover {
+            background: rgb(239, 238, 254);
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .nav-main ul li a {
+            color: white;
+            text-decoration: none;
+            transition: font-weight 0.3s;
+            /**/
+        }
+
+        .nav-main ul li a:hover {
+            font-weight: bold;
+            transform: scale(1);
+            /**/
+            color: rgb(240, 163, 10);
+        }
+
+
+
+
+
+        .ten {
+            color: brown;
+            margin: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 100%;
+
+        }
+
+        .stt {
+            border-radius: 10px 0px 0px 0px;
+        }
+
+        .ghichu {
+            border-radius: 0px 10px 0px 0px;
+        }
+
+        .dong1 {
+            background-color: rgb(234, 234, 234);
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: smaller;
+        }
+
+
+
+        table img {
+            max-width: 100px;
+            max-height: 100px;
+            transition: transform 0.3s ease;
+            /*tạo hiệu ứng nâng lên mượt mà trong 0.3 giây.*/
+        }
+
+        table img:hover {
+            transform: scale(1.05);
+            /*cho ảnh, làm tăng kích thước của nó lên 1.1 lần*/
+        }
+
+
+        .ten {
+            text-align: center;
+        }
+
+        .nav-main button[type="submit"] {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .nav-main button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: rgb(133, 68, 144);
+            color: #d2cfcf;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: smaller;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header-main">
+            <a href="ass1.html"><img src="img/logonew-removebg-preview.png" alt=""></a>
+        </header>
+        <nav class="nav-main">
+            <ul>
+                <li><a href="../Ass1/ass1.html">Trang chủ</a></li>
+                <li><a href="../Ass2/tranglienhe/lienhe.html">Liên hệ</a></li>
+                <li><a href="../Ass1/ass1.html">Sản phẩm</a></li>
+                <li><a href="../Ass1/lietke.html">Bảng giá</a></li>
+                <li><a href="../Ass2/trangdangnhap/dangnhap.html">Đăng nhập</a></li>
+                <li><a href=""></a></li>
+                <li>
+                    <aside>
+                        <input type="text" placeholder="Tìm kiếm">
+                        <button type="submit">Tìm kiếm</button>
+                    </aside>
+                </li>
+
+            </ul>
+        </nav>
+
+        <h1 class="ten">Điện thoại nổi bật nhất</h1>
+        <table>
+            <tr class="dong1">
+                <th class="stt">STT</th>
+                <th>Tên sản phẩm</th>
+                <th>Ảnh sản phẩm</th>
+                <th>Giá khuyến mãi</th>
+                <th>Giá ban đầu</th>
+                <th class="ghichu">Ghi chú</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>iPhone 14 Pro Max</td>
+                <td><img src="img/iphone-14-pro-max-128gb-black-thumb-650x650-2.webp" alt=""></td>
+                <td>28.990.000đ</td>
+                <td>30.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>iPhone 13 Pro</td>
+                <td><img src="img/iphone-13-pro-max-blue-1-2-3-650x650-2.webp" alt=""></td>
+                <td>23.990.000đ</td>
+                <td>24.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>iPhone 12</td>
+                <td><img src="img/iphone-12-purple-3-1-650x650-1.webp" alt=""></td>
+                <td>18.990.000đ</td>
+                <td>23.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>iPhone SE</td>
+                <td><img src="img/iphone-se-red-1-650x650-1.webp" alt=""></td>
+                <td>10.990.000đ</td>
+                <td>15.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Samsung Galaxy Z Fold 4</td>
+                <td><img src="img samsung/samsung_galaxy_z_fold_4-7.webp" alt=""></td>
+                <td>31.990.000đ</td>
+                <td>40.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Samsung Galaxy S23 Ultra</td>
+                <td><img src="img samsung/samsung-galaxy-s23-ultra-1-600x600.jpg" alt=""></td>
+                <td>21.990.000đ</td>
+                <td>30.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Samsung Galaxy S23 Ultra Tím</td>
+                <td><img src="img samsung/s23-ultra-tim.webp" alt=""></td>
+                <td>20.990.000đ</td>
+                <td>30.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Samsung Galaxy Z Fold 4</td>
+                <td><img src="img samsung/samsung_galaxy_z_fold_4-7.webp" alt=""></td>
+                <td>31.990.000đ</td>
+                <td>40.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>iPad Pro 2021</td>
+                <td><img src="img ipad/ipad-pro-2021-11inch-grey_3.webp" alt=""></td>
+                <td>20.990.000đ</td>
+                <td>30.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>iPad Air 2022</td>
+                <td><img src="img ipad/5_160_6.webp" alt=""></td>
+                <td>15.990.000đ</td>
+                <td>16.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>iPad Mini 6</td>
+                <td><img src="img ipad/ipadmini6.webp" alt=""></td>
+                <td>9.990.000đ</td>
+                <td>16.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>iPad Gen 10</td>
+                <td><img src="img ipad/ipad-2022-hero-silver-wifi-select_1.webp" alt=""></td>
+                <td>10.990.000đ</td>
+                <td>11.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Samsung Galaxy Tab S8</td>
+                <td><img src="img ipad/samsung-galaxy-tab-s8-002.webp" alt=""></td>
+                <td>15.990.000đ</td>
+                <td>16.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Samsung Galaxy Tab S7</td>
+                <td><img src="img ipad/samsung-galaxy-tab-s7-fe-chinh-hang_1_1_2_1.webp" alt=""></td>
+                <td>11.990.000đ</td>
+                <td>12.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Xiaomi Pad 5</td>
+                <td><img src="img ipad/Xiaomipad5.webp" alt=""></td>
+                <td>7.990.000đ</td>
+                <td>10.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Samsung Galaxy Tab A8</td>
+                <td><img src="img ipad/samsung-galaxy-tab-s8-002.webp" alt=""></td>
+                <td>5.990.000đ</td>
+                <td>6.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Macbook Pro M2</td>
+                <td><img src="img laptop/macprom2.webp" alt=""></td>
+                <td>35.990.000đ</td>
+                <td>40.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Macbook Air M1</td>
+                <td><img src="img laptop/macm1.webp" alt=""></td>
+                <td>17.990.000đ</td>
+                <td>28.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Lenovo Legion 5</td>
+                <td><img src="img laptop/legion5.webp" alt=""></td>
+                <td>28.990.000đ</td>
+                <td>33.990.000đ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Lenovo IdeaPad Gaming 3 2022</td>
+                <td><img src="img laptop/gaming32022.webp" alt=""></td>
+                <td>23.990.000đ</td>
+                <td>27.990.000đ</td>
+                <td></td>
+            </tr>
+        </table>
+
+        <footer>
+            CÔNG TY CỔ PHẦN THƯƠNG MẠI - DỊCH VỤ
+            TR1
+            © 2023 - 2050 Công Ty Cổ Phần Thương
+            Mại - Dịch Vụ TR1
+
+            Giấy chứng nhận đăng ký doanh nghiệp:
+            0358168699 do Sở KH-ĐT TP.HN cấp lần đầu ngày 24 tháng 05 năm 2023
+        </footer>
