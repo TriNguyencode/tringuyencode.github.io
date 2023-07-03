@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            width: 980px;
+            margin: auto;
+        }
+
+        .header-main {
+            height: 150px;
+            background: black;
+            text-align: center;
+
+
+        }
+
+        .header-main img {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            max-width: 150px;
+
+        }
+
+        .nav-main {
+            display: inline-block;
+            /**/
+            height: 50px;
+            background: rgb(133, 68, 144);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav-main ul li {
+            list-style: none;
+            float: left;
+            line-height: 50px;
+            padding: 0 30px;
+
+        }
+
+        .nav-main ul li:hover {
+            background: rgb(239, 238, 254);
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .nav-main ul li a {
+            color: white;
+            text-decoration: none;
+            transition: font-weight 0.3s;
+            /**/
+        }
+
+        .nav-main ul li a:hover {
+            font-weight: bold;
+            transform: scale(1);
+            /**/
+            color: rgb(240, 163, 10);
+        }
+
+        .slider {
+            height: 250px;
+
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px 0px 20px 20px;
+        }
+
+        .ten {
+            margin: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .pro-news {
+            height: 700px;
+            border-radius: 15px;
+            padding: 20px;
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            /* Xác định 4 cột có chiều rộng bằng nhau */
+            grid-gap: 15px;
+            text-align: center;
+            background: rgb(245, 245, 245);
+        }
+
+        .pro-news-item {
+            padding: 10px;
+            ;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+
+            border-radius: 20px;
+            border: 1px solid rgba(215, 216, 216, 0.645);
+            background: rgb(255, 255, 255);
+
+
+
+            background-color: white;
+            /* Màu nền */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.206);
+            /* Đổ bóng */
+
+
+        }
+
+
+
+        .tensp {
+            padding-top: 10px;
+            /*chữ nhập vào khuôn kể cả dài hay ngắn thì sẽ luôn chiếm  2 dòng*/
+            height: 3em;
+            /* Chiều cao tương đương 2 dòng (ví dụ 3em) */
+            overflow: hidden;
+            /* Ẩn nội dung vượt quá kích thước */
+
+        }
+
+        .tensp:hover {
+            color: brown;
+        }
+
+        .link {
+            text-decoration: none;
+        }
+
+        .sp {
+            color: red;
+            margin-top: 25px;
+
+        }
+
+        .sp span {
+            color: gray;
+            text-decoration: line-through;
+        }
+
+        .pro-news-item img {
+            width: 100%;
+            transition: transform 0.3s ease;
+            /*tạo hiệu ứng nâng lên mượt mà trong 0.3 giây.*/
+        }
+
+        .pro-news-item img:hover {
+            transform: scale(1.05);
+            /*cho ảnh, làm tăng kích thước của nó lên 1.1 lần*/
+        }
+
+        .tenhott {
+            color: rgba(255, 0, 0, 0.617);
+            /* Đổi màu chữ thành màu đỏ */
+            font-size: 30px;
+            /* Có thể điều chỉnh kích thước chữ tùy ý */
+            font-weight: bold;
+            /* Tạo đậm cho chữ */
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background: rgb(255, 211, 145);
+            border-radius: 20px 20px 0px 0px;
+        }
+
+
+
+
+
+
+
+
+
+
+        .pro-bestsale {
+            height: 450px;
+            border-radius: 0px 0px 20px 20px;
+            padding: 20px;
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr;
+            /* Xác định 4 cột có chiều rộng bằng nhau */
+            grid-gap: 15px;
+            text-align: center;
+            background: rgb(255, 211, 145);
+        }
+
+        .pro-bestsale-item {
+            padding: 10px;
+            ;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+
+            border-radius: 20px;
+            border: 1px solid rgba(215, 216, 216, 0.645);
+            background: rgb(255, 255, 255);
+            background-color: white;
+            /* Màu nền */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.206);
+            /* Đổ bóng */
+
+            overflow: hidden;
+            /* sẽ giúp ẩn bớt phần của ảnh khi nó được phóng to*/
+        }
+
+        .pro-bestsale-item .tensp {
+            color: rgb(211, 5, 5);
+            font-size: larger;
+        }
+
+        .pro-bestsale-item .tensp:hover {
+            color: rgb(255, 0, 0);
+        }
+
+        .pro-bestsale-item img {
+            width: 100%;
+
+            transition: transform 0.3s ease;
+            /*tạo hiệu ứng nâng lên mượt mà trong 0.3 giây.*/
+        }
+
+        .pro-bestsale-item img:hover {
+            transform: scale(1.05);
+            /*cho ảnh, làm tăng kích thước của nó lên 1.1 lần*/
+        }
+
+        .pro-bestsale-item .sp {
+            font-size: larger;
+        }
+
+
+
+
+
+
+        .galaxy {
+            height: 200px;
+            border: 1px solid rgb(236, 236, 236);
+            padding: 10px;
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            /* Xác định 4 cột có chiều rộng bằng nhau */
+            grid-gap: 15px;
+            text-align: center;
+            background: rgb(245, 245, 245);
+
+
+            border-radius: 20px;
+        }
+
+
+
+
+
+
+
+
+
+
+        .pro-news-items {
+
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+
+            border-radius: 20px;
+            border: 1px solid rgba(215, 216, 216, 0.645);
+            background: rgb(255, 255, 255);
+
+
+
+            background-color: white;
+            /* Màu nền */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.206);
+            /* Đổ bóng */
+
+            overflow: hidden;
+            /* sẽ giúp ẩn bớt phần của ảnh khi nó được phóng to*/
+        }
+
+        .pro-news-items img {
+            transition: transform 0.3s ease;
+            /*tạo hiệu ứng nâng lên mượt mà trong 0.3 giây.*/
+        }
+
+        .pro-news-items img:hover {
+            transform: scale(1.2);
+            /*cho ảnh, làm tăng kích thước của nó lên 1.1 lần*/
+        }
+
+        .footer-main {
+            font-size: small;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(164, 161, 161);
+            text-align: center;
+            margin: 0px;
+            height: 50px;
+            background: rgb(100, 13, 147);
+            padding: 10px;
+
+        }
+
+
+
+
+        /*Viền cho phần menu ................................*/
+        li {
+            border-right: 1px solid black;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        /*................................................*/
+
+
+        .nav-main aside {
+            text-align: center;
+            border-radius: 50px;
+        }
+
+
+
+
+
+
+        .nav-main button[type="submit"] {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            margin-left: 5px;
+            /* position: fixed;Các thuộc tính khác cho phần từ không thể bị di chuyển */
+        }
+
+        .nav-main button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header-main">
+            <a href="ass1.html"><img src="img/logonew-removebg-preview.png" alt=""></a>
+
+        </header>
+        <nav class="nav-main">
+            <ul>
+                <li><a href="../Ass1/ass1.html">Trang chủ</a></li>
+                <li><a href="../Ass2/tranglienhe/lienhe.html">Liên hệ</a></li>
+                <li><a href="../Ass1/ass1.html">Sản phẩm</a></li>
+                <li><a href="../Ass1/lietke.html">Bảng giá</a></li>
+                <li><a href="../Ass2/trangdangnhap/dangnhap.html">Đăng nhập</a></li>
+                <li><a href=""></a></li>
+                <li>
+                    <aside>
+                        <input type="text" placeholder="Tìm kiếm">
+                        <button type="submit">Tìm kiếm</button>
+                    </aside>
+                </li>
+
+            </ul>
+        </nav>
+
+
+
+        <!-- banner và danh mục         -->
+        <div class="banner_danhmuc">
+            <div class="slider">
+                <img src="img/Banner_iPhone_14_Series.jpg" alt="">
+            </div>
+            <!-- banner và danh mục         -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h1 class="tenhott">HOT SALE tuần này</h1>
+            <div class="pro-bestsale">
+                <div class="pro-bestsale-item"><a class="link" href="../Ass2/trang_sp1.html">
+                        <img src="img ipad/ipadmini6.webp" alt="">
+                        <p class="tensp">iPad Mini 6</p>
+                    </a>
+                    <p class="sp">9.990.000đ <span>16.990.000đ</span>
+                    </p>
+                </div>
+
+                <div class="pro-bestsale-item"><img src="img laptop/macm1.webp" alt="">
+                    <p class="tensp">Macbook Air M1</p>
+                    <p class="sp">17.990.000đ <span>28.990.000đ</span></p>
+                </div>
+
+                <div class="pro-bestsale-item"><img src="./img samsung/s23-ultra-tim.webp" alt="">
+                    <p class="tensp">Samsung Galaxy S23 Ultra Tím</p>
+                    <p class="sp">20.990.000đ <span>30.990.000đ</span></p>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h1 class="ten">Điện thoại nổi bật nhất</h1>
+            <div class="pro-news">
+
+
+                <div class="pro-news-item"><img src="./img/iphone-14-pro-max-128gb-black-thumb-650x650-2.webp" alt="">
+                    <p class="tensp">iPhone 14 Pro Max</p>
+                    <p class="sp">28.990.000đ <span>30.990.000đ</span></p>
+                </div>
+
+                <div class="pro-news-item"><img src="./img/iphone-13-pro-max-blue-1-2-3-650x650-2.webp" alt="">
+                    <p class="tensp">iPhone 13 Pro</p>
+                    <p class="sp">23.990.000đ <span>24.990.000đ</span></p>
+                </div>
+
+                <div class="pro-news-item"><img src="./img/iphone-12-purple-3-1-650x650-1.webp" alt="">
+                    <p class="tensp">iPhone 12</p>
+                    <p class="sp">18.990.000đ <span>23.990.000đ</span></p>
+                </div>
+
+                <div class="pro-news-item"><img src="./img/iphone-se-red-1-650x650-1.webp" alt="">
+                    <p class="tensp">iPhone SE </p>
+                    <p class="sp">10.990.000đ <span>15.990.000đ</span></p>
+                </div>
+                <!-- samsung -->
+                <div class="pro-news-item"><img src="./img samsung/samsung_galaxy_z_fold_4-7.webp" alt="">
+                    <p class="tensp">Samsung Galaxy Z Fold 4</p>
+                    <p class="sp">31.990.000đ <span>40.990.000đ</span></p>
+                </div>
+
+                <div class="pro-news-item"><img src="./img samsung/samsung-galaxy-s23-ultra-1-600x600.jpg" alt="">
+                    <p class="tensp">Samsung Galaxy S23 Ultra</p>
+                    <p class="sp">21.990.000đ <span>30.990.000đ</span></p>
+                </div>
+
+                <div class="pro-news-item"><img src="./img samsung/s23-ultra-tim.webp" alt="">
+                    <p class="tensp">Samsung Galaxy S23 Ultra Tím</p>
+                    <p class="sp">20.990.000đ <span>30.990.000đ</span></p>
+                </div>
+
+                <div class="pro-news-item"><img src="./img samsung/samsung_galaxy_z_fold_4-7.webp" alt="">
+                    <p class="tensp">Samsung Galaxy Z Fold 4</p>
+                    <p class="sp">31.990.000đ <span>40.990.000đ</span></p>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <h1 class="ten">Máy tính bảng tiện lợi</h1>
+        </div>
+        <!-- banner và danh mục         -->
+
+
+
+
+
+        <div class="pro-news">
+
+
+            <div class="pro-news-item"><img src="./img ipad/ipad-pro-2021-11inch-grey_3.webp" alt="">
+                <p class="tensp">iPad Pro 2021</p>
+                <p class="sp">20.990.000đ <span>30.990.000đ</span></p>
+            </div>
+
+            <div class="pro-news-item"><img src="./img ipad/5_160_6.webp" alt="">
+                <p class="tensp">iPad Air 2022</p>
+                <p class="sp">15.990.000đ <span>16.990.000đ</span></p>
+            </div>
+
+            <div class="pro-news-item"><img src="./img ipad/ipadmini6.webp" alt="">
+                <p class="tensp">iPad Mini 6</p>
+                <p class="sp">9.990.000đ <span>16.990.000đ</span></p>
+            </div>
+
+            <div class="pro-news-item"><img src="./img ipad/ipad-2022-hero-silver-wifi-select_1.webp" alt="">
+                <p class="tensp">iPad Gen 10 </p>
+                <p class="sp">10.990.000đ <span>11.990.000đ</span></p>
+            </div>
+            <!-- samsung -->
+            <div class="pro-news-item"><img src="./img ipad/samsung-galaxy-tab-s8-002.webp" alt="">
+                <p class="tensp">Samsung Galaxy Tab S8</p>
+                <p class="sp">15.990.000đ <span>16.990.000đ</span></p>
+            </div>
+
+            <div class="pro-news-item"><img src="./img ipad/samsung-galaxy-tab-s7-fe-chinh-hang_1_1_2_1.webp" alt="">
+                <p class="tensp">Samsung Galaxy Tab S7</p>
+                <p class="sp">11.990.000đ <span>12.990.000đ</span></p>
+            </div>
+
+            <div class="pro-news-item"><img src="./img ipad/Xiaomipad5.webp" alt="">
+                <p class="tensp">Xiaomi Pad 5</p>
+                <p class="sp">7.990.000đ <span>10.990.000đ</span></p>
+            </div>
+
+            <div class="pro-news-item"><img src="./img ipad/samsung-galaxy-tab-s8-002.webp" alt="">
+                <p class="tensp">Samsung Galaxy Tab A8</p>
+                <p class="sp">5.990.000đ <span>6.990.000đ</span></p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <h1 class="ten">Laptop phù hợp</h1>
+
+        <!-- banner và danh mục         -->
+
+
+
+
+
+        <div class="pro-news">
+
+
+            <div class="pro-news-item"><img src="./img laptop/macprom2.webp" alt="">
+                <p class="tensp">Macbook Pro M2</p>
+                <p class="sp">35.990.000đ <span>40.990.000đ</span></p>
+            </div>
+
+            <div class="pro-news-item"><img src="./img laptop/macm1.webp" alt="">
+                <p class="tensp">Macbook Air M1</p>
+                <p class="sp">17.990.000đ <span>28.990.000đ</span></p>
+            </div>
+
+            <div class="pro-news-item"><img src="./img laptop/legion5.webp" alt="">
+                <p class="tensp">Lenovo Legion 5</p>
+                <p class="sp">28.990.000đ <span>33.990.000đ</span></p>
+            </div>
+
+            <div class="pro-news-item"><img src="./img laptop/gaming32022.webp" alt="">
+                <p class="tensp">Lenovo IdeaPad Gaming 3 2022</p>
+                <p class="sp">23.990.000đ <span>27.990.000đ</span></p>
+            </div>
+
+            <div class="pro-news-item"><img src="./img laptop/g513.webp" alt="">
+                <p class="tensp">Asus ROG Strix G513</p>
+                <p class="sp">18.990.000đ <span>22.990.000đ</span></p>
+            </div>
+
+            <div class="pro-news-item"><img src="./img laptop/Surface pro7.webp" alt="">
+                <p class="tensp">Surface Pro 7</p>
+                <p class="sp">31.990.000đ <span>40.990.000đ</span></p>
+            </div>
+
+            <div class="pro-news-item"><img src="./img laptop/macminim2.webp" alt="">
+                <p class="tensp">Mac Mini M2</p>
+                <p class="sp">16.990.000đ <span>20.990.000đ</span></p>
+            </div>
+
+            <div class="pro-news-item"><img src="./img laptop/gaming3 2021.webp" alt="">
+                <p class="tensp">Lenovo IdeaPad Gaming 3 2021</p>
+                <p class="sp">15.990.000đ <span>18.990.000đ</span></p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div>
+            <h1 class="ten">Phụ kiện</h1>
+        </div>
+
+        <div class="galaxy">
+            <div class="pro-news-items"><img src="./img phukien/10-Cápsạcchuyểndổi-120x120.png" alt="">
+                <p class="tensp">Cáp sạc</p>
+            </div>
+
+            <div class="pro-news-items"><img src="./img phukien/13-Chuộtmáytính-120x120.png" alt="">
+                <p class="tensp">Chuột máy tính</p>
+            </div>
+
+            <div class="pro-news-items"><img src="./img phukien/21-Tainghe-120x120.png" alt="">
+                <p class="tensp">Tai nghe</p>
+            </div>
+
+            <div class="pro-news-items"><img src="./img phukien/22-Loa2-120x120.png" alt="">
+                <p class="tensp">Loa</p>
+            </div>
+
+            <div class="pro-news-items"><img src="./img phukien/5-Pinsạcdựphòng-120x120.png" alt="">
+                <p class="tensp">Pin dự phòng</p>
+            </div>
+
+
+
+        </div>
+        <footer class="footer-main">CÔNG TY CỔ PHẦN THƯƠNG MẠI - DỊCH VỤ
+            TR1
+            © 2023 - 2050 Công Ty Cổ Phần Thương
+            Mại - Dịch Vụ TR1
+
+            Giấy chứng nhận đăng ký doanh nghiệp:
+            0358168699 do Sở KH-ĐT TP.HN cấp lần đầu ngày 24 tháng 05 năm 2023</footer>
+    </div>
+
+
+</body>
+
+</html>
